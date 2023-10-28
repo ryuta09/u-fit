@@ -1,0 +1,75 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+<Layout title="お問い合わせページ">
+  <div class="p-plan__bg">
+    <div class="c-bg c-bg--contact"></div>
+  </div>
+  <!-- <div class="l-bg c-bg c-bg--contact"></div> -->
+  
+  <div class="p-contact-row">
+  
+
+    <form class="p-contact-row__form" action="mail.php" method="post">
+      <h2 class="c-title c-title--center p-contact-row__title">
+        <span class="c-dots c-dots--contact">無料体験受付</span>
+      </h2>
+      <dl class="p-contact-row__form-inner">
+        <div class="p-contact-row__item">
+          <dt class="p-contact-row__label">
+            <label for="name">お名前<span class="p-contact-row__required">必須</span></label>
+          </dt>
+          <dd class="p-contact-row__input">
+            <input type="text" id="name" name="お名前">
+          </dd>
+        </div>
+        <div class="p-contact-row__item">
+          <dt class="p-contact-row__label">
+            <label for="性別">性別</label>
+          </dt>
+          <dd class="p-contact-row__input">
+            <div class="p-contact-row__radio">
+              <label><input type="radio" name="性別" value="女性" checked><span>女性</span></label>
+              <label><input type="radio" name="性別" value="男性"><span>男性</span></label>
+            </div>
+          </dd>
+        </div>
+        <div class="p-contact-row__item">
+          <dt class="p-contact-row__label">
+            <label for="address">ご住所<span class="p-contact-row__required">必須</span></label>
+          </dt>
+          <dd class="p-contact-row__input">
+            <input type="text" id="address" name="ご住所">
+          </dd>
+        </div>
+        <div class="p-contact-row__item">
+          <dt class="p-contact-row__label">
+            <label for="">メールアドレス<span class="p-contact-row__required">必須</span></label>
+          </dt>
+          <dd class="p-contact-row__input">
+            <input type="email" id="email" name="メールアドレス">
+          </dd>
+        </div>
+        <div class="p-contact-row__item">
+          <dt class="p-contact-row__label">
+            <label for="tel">電話番号<span class="p-contact-row__required">必須</span></label>
+          </dt>
+          <dd class="p-contact-row__input">
+            <input type="tel" id="tel" name="電話番号">
+          </dd>
+        </div>
+        <div class="p-contact-row__item">
+          <dt class="p-contact-row__label p-contact-row__label--textarea">
+            <label for="contact">ご相談内容<span class="p-contact-row__required">必須</span></label>
+          </dt>
+          <dd class="p-contact-row__input">
+            <textarea id="contact" name="ご相談内容"></textarea>
+          </dd>
+        </div>
+      </dl>
+      <div class="p-contact-row__submit">
+        <input type="submit" value="送信する">
+      </div>
+    </form>
+  </div>
+</Layout>

@@ -1,0 +1,104 @@
+@use '../global' as g;
+
+.p-voice {
+  margin-top: 4rem;
+  @include g.mq(md) {
+    margin-top: 11.2rem;
+  }
+  &__inner {
+    max-width: 568px;
+    margin-inline: auto;
+    margin-top: 3.2rem;
+    padding: 0 2.5rem;
+    @include g.mq(sm) {
+      max-width: 768px;
+    }
+    @include g.mq(md) {
+      margin-top: 7.2rem;
+      max-width: 1412px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+
+  &__item {
+    flex: 0 0 248px;
+    aspect-ratio: 1 / 1;
+    letter-spacing: g.$ls8;
+    background: g.$white;
+    border-radius: 50%;
+    position: relative;
+    @include g.mq(md) {
+      flex: 0 0 323px;
+    }
+  }
+
+  &__area {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+  }
+
+  &__lead {
+    width: 155px;
+    font-size: 1.6rem;
+    padding-bottom: 1.4rem;
+    line-height: calc(20 / 16);
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      display: block;
+      width: 67px;
+      height: 1px;
+      margin-inline: auto;
+      background: g.$gray;
+    }
+  }
+
+  &__cont {
+    display: flex;
+    align-items: center;
+    margin-top: 1.6rem;
+  }
+
+  &__body {
+    
+  }
+
+  &__previous {
+    font-size: 1.6rem;
+  }
+
+  &__current {
+    font-size: 3.2rem;
+  }
+
+  &__age {
+    font-size: 1.2rem;
+  }
+
+  &__img {
+    margin-left: 1.6em;
+    img {
+      width: 91px;
+      aspect-ratio: 1 / 1;
+    }
+  }
+}
+
+/* swiper調整用
+------------------------------------*/
+.p-voice {
+  overflow: hidden;
+}
+.swiper {
+  overflow: visible;
+}

@@ -1,0 +1,14 @@
+@use '../global' as g;
+
+.c-title {
+  font-size: 2rem;
+  color: g.$white;
+  font-weight: 400;
+  @include g.mq(md) {
+    font-size: 4rem;
+  }
+
+  &--center {
+    text-align: center;
+  }
+}

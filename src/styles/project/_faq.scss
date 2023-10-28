@@ -1,0 +1,87 @@
+@use '../global' as g;
+
+.p-faq {
+  margin-top: 7.2rem;
+  @include g.mq(md) {
+    margin-top: 11.2rem;
+  }
+
+  &__inner {
+    margin-top: 3.2rem;
+    @include g.mq(md) {
+      margin-top: 7.2rem;
+    }
+  }
+
+  &__details {
+    &:not(:first-child) {
+      margin-top: 2.4rem;
+      @include g.mq(md) {
+        margin-top: 3.2rem;
+      }
+    }
+  }
+
+  &__summary {
+    display: block;
+    list-style: none;
+    font-size: 1.4rem;
+    padding: .9rem 3rem .9rem 1.2rem;
+    background: g.$white;
+    position: relative;
+    @include g.mq(md) {
+      font-size: 1.8rem;
+      font-weight: 700;
+    }
+    &::-webkit-details-marker {
+      list-style: none;
+    }
+    &::-webkit-details-marker { display: none }
+    & > span {
+      display: inline-block;
+      margin-right: 0.8em;
+    } 
+  }
+
+  &__arrow {
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    transform: translateY(-50%) rotate(45deg);
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-bottom: 4px solid g.$gray2;
+    border-right: 4px solid g.$gray2;
+    transition: all .3s;
+  }
+
+  &__body {
+    overflow: hidden;
+  }
+
+  &__text {
+    font-size: 1.6rem;
+    line-height: calc(24 / 16);
+    padding-top: 1.6rem;
+    @include g.mq(md) {
+      padding-top: 2.3rem;
+    }
+    & > span {
+
+    }
+  }
+
+  &__btn {
+    margin-top: 4.8rem;
+    @include g.mq(md) {
+      margin-top: 8.8em;
+    }
+  }
+
+}
+/* クリックした時の矢印アイコンの挙動
+------------------------------------*/
+.js-arrow {
+  transform: translateY(-50%) rotate(-135deg);
+}

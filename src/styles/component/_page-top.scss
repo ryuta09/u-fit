@@ -1,0 +1,24 @@
+@use '../global' as g;
+
+.c-page-top {
+  opacity: 0;
+  pointer-events: none;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  width: 50px;
+  z-index: 200;
+  border-radius: 50%;
+  aspect-ratio: 1 / 1;
+  cursor: pointer;
+  background: g.$bluePale;
+  display: grid;
+  place-items: center;
+  font-size: 1.6rem;
+  box-shadow: 0 6px 6px rgba(g.$gray, 0.25);
+  transition: all .3s;
+  &:hover {
+    background: g.$white;
+    color: g.$mainBlue;
+  }
+}

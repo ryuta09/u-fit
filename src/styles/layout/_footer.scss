@@ -1,5 +1,94 @@
 @use '../global' as g;
 
 .l-footer {
+  margin-top: 7.2rem;
+  @include g.mq(md) {
+    margin-top: 13.6rem;
+  }
+  &__inner {
+    background: g.$blueBold;
+    letter-spacing: g.$ls8;
+    text-align: center;
+    padding-top: 1.8rem;
+    padding-bottom: 4.1rem;
+    @include g.mq(md) {
+      padding-top: 6.4rem;
+      padding-bottom: 8rem;
+    }
+  }
 
+  &__logo {
+    &-title {
+      margin-top: 1.6rem;
+      font-size: 4rem;
+      font-weight: 400;
+      @include g.mq(md) {
+        margin-top: 4rem;
+        font-size: 6.4rem;
+      }
+    }
+
+  }
+
+  a {
+    img {
+      width: 72px;
+      aspect-ratio: 1 / 1;
+      margin-inline: auto;
+      @include g.mq(md) {
+        width: 96px;
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.6rem;
+    @include g.mq(md) {
+      margin-top: 4rem;
+    }
+  }
+
+  &__item {
+    &:not(:first-child) {
+      margin-left: 3.2rem;
+    }
+    a {
+      font-size: 1.4rem;
+      @include g.mq(md) {
+        font-size: 1.6rem;
+      }
+      @include g.mq(lg) {
+        position: relative;
+        &::before {
+          content: '';
+          position: absolute;
+          bottom: -10px;
+          left: 0;
+          width: 0;
+          height: 2px;
+          background: g.$gray;
+          transform-origin: left center;
+          transition: all .3s;
+        }
+        &:hover {
+          &::before {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  &__copyright {
+    padding: 3rem 0;
+    text-align: center;
+    @include g.mq(md) {
+      padding: 5rem 0;
+    }
+  }
+
+
+  
 }

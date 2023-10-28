@@ -1,1 +1,26 @@
 @use '../global' as g;
+
+.l-container {
+  width: 100%;
+  margin-inline: auto;
+
+  &--about {
+    max-width: g.$inner;
+  }
+
+  &--feature {
+    max-width: 672px;
+  }
+
+  &--faq {
+    max-width: 740px;
+  }
+
+  &--course {
+    max-width: 1032px;
+    padding: 0;
+    @include g.mq(md) {
+      padding: 0 2.5rem;
+    }
+  }
+}

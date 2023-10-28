@@ -2,6 +2,7 @@
 import Header from "./Header.astro";
 import Footer from "./Footer.astro";
 import '../styles/style.scss';
+import './LocalScripts.astro';
 const { title } = Astro.props;
 ---
 <!DOCTYPE html>
@@ -9,14 +10,25 @@ const { title } = Astro.props;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Oswald:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel ="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <title>{ title }</title>
   </head>
   <body>
+    <div id="loading-left"></div>
+    <div id="loading-right"></div>
+    <div class="c-page-top">TOP</div>
 		<Header />
     <main class="l-main">
-      <slot />
+      <div class="body-wrapper">
+        <slot />
+      </div>
     </main>
 		<Footer />
-    <script type="module" src="/assets/js/index.js"></script>
+    <script is:inline type="module" src="/assets/js/swiper.js"></script>
+    <script is:inline type="module" src="/assets/js/index.js"></script>
   </body>
 </html>

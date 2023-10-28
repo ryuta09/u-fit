@@ -1,9 +1,193 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from '../layouts/Layout.astro'
 ---
 
 <Layout title="コーディング">
-	<section>
-		<h1>ここにmainが入ります。</h1>
-	</section>
+
+    <!-- mv -->
+    <section class="l-mv">
+      <div class="l-mv__cont">
+        <h2 class="l-mv__title">U&nbsp;FIT</h2>
+      </div>
+    </section>
+
+    <section class="p-about">
+      <div class="p-about__inner l-container l-container--about">
+        <div class="p-about__cont">
+          <div class="p-about__body">
+            <h3 class="c-title p-about__title c-dots">Be yourself</h3>
+            <p class="p-about__text">
+              U FITは、<span>自分の好きな自分になれる場所</span><br>
+              一時的なボディメイクのサポートではなく、お客様1人1人に寄り添い、長期間における身体のあり方を「共に」作り上げていきます。
+            </p>
+          </div>
+          <figure class="p-about__img">
+            <img src="/assets/images/about.webp" alt="両手にトレーニング用のグローブ着用しながら右手で重りを持ちそれを左手で抑えてる長髪の女性">
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="p-feature" id="feature">
+      <h3 class="c-title c-title--center p-feature__title">FEATURE</h3>
+      <div class="p-feature__inner l-container l-container--feature l-section">
+        <ul class="p-feature__list">
+          <li class="p-feature__item">
+            <span class="p-feature__number">01</span>
+            <h3 class="p-feature__item-title">種類豊富なマシーン完備</h3>
+            <figure class="p-feature__img">
+              <img src="/assets/images/feature-img1.webp" alt="ランニングマシンが並んでいる写真">
+            </figure>
+            <p class="p-feature__text">幅広い種類のトレーニングマシーンで、最適なトレーニングを提供します。<br>
+              ウエイトトレーニングHITトレーニングができる環境が整っています。
+            </p>
+          </li>
+          <li class="p-feature__item">
+            <span class="p-feature__number">02</span>
+            <h3 class="p-feature__item-title">あなたに寄り添うトレーナー</h3>
+            <figure class="p-feature__img">
+              <img src="/assets/images/feature-img2.webp" alt="右手にはバインダーを持ち左腕は拳を握りしめてポーズをしているジムの店員">
+            </figure>
+            <p class="p-feature__text">当ジムのトレーナーは、あなたに寄り添いながら、個別の目標に合わせたカスタムトレーニングを提供します。<br>
+              わたしたちと一緒に最高の体作りを目指しましょう。
+            </p>
+          </li>
+          <li class="p-feature__item">
+            <span class="p-feature__number">03</span>
+            <h3 class="p-feature__item-title">通いやすいロケーション</h3>
+            <figure class="p-feature__img">
+              <img src="/assets/images/feature-img3.webp" alt="地下鉄の通路のような綺麗な道の写真">
+            </figure>
+            <p class="p-feature__text">駅から徒歩3分の立地で、忙しい日常の中でも、手軽にトレーニングが可能！<br>
+              あなたのフィットネス生活をサポートします。
+              
+            </p>
+          </li>
+        </ul>
+      </div>
+    </section>
+  
+    <section class="p-parallax">
+      <div class="p-parallax__inner">
+        <div class="p-parallax__img" style="background-image: url(/assets/images/parallax-bg_top.webp)"></div>
+      </div>
+    </section>
+
+    <section class="p-voice" id="voice">
+      <h2 class="c-title c-title--center">VOICE</h2>
+      <div class="p-voice__inner swiper">
+        <div class="p-voice__list swiper-wrapper">
+          <div class="p-voice__item swiper-slide">
+            <div class="p-voice__area">
+              <p class="p-voice__lead">ストレスなく続けることが出来ました！</p>
+              <div class="p-voice__cont">
+                <div class="p-voice__body">
+                  <p class="p-voice__previous">56kg</p>
+                  <p class="p-voice__current">53kg</p>
+                  <p class="p-voice__age">(27歳女性)</p>
+                </div>
+                <div class="p-voice__img">
+                  <img src="/assets/images/slider-img1.webp" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="p-voice__item swiper-slide">
+            <div class="p-voice__area">
+              <p class="p-voice__lead">自分に自信を持てるようになりました！</p>
+              <div class="p-voice__cont">
+                <div class="p-voice__body">
+                  <p class="p-voice__previous">68kg</p>
+                  <p class="p-voice__current">46kg</p>
+                  <p class="p-voice__age">(24歳女性)</p>
+                </div>
+                <div class="p-voice__img">
+                  <img src="/assets/images/slider-img2.webp" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="p-voice__item swiper-slide">
+            <div class="p-voice__area">
+              <p class="p-voice__lead">気付いたら運動が習慣になっていました</p>
+              <div class="p-voice__cont">
+                <div class="p-voice__body">
+                  <p class="p-voice__previous">81kg</p>
+                  <p class="p-voice__current">60kg</p>
+                  <p class="p-voice__age">(25歳男性)</p>
+                </div>
+                <div class="p-voice__img">
+                  <img src="/assets/images/slider-img3.webp" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="p-voice__item swiper-slide">
+            <div class="p-voice__area">
+              <p class="p-voice__lead">心も体も健康になりました！</p>
+              <div class="p-voice__cont">
+                <div class="p-voice__body">
+                  <p class="p-voice__previous">56kg</p>
+                  <p class="p-voice__current">53kg</p>
+                  <p class="p-voice__age">(27歳女性)</p>
+                </div>
+                <div class="p-voice__img">
+                  <img src="/assets/images/slider-img4.webp" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    
+
+    <div class="p-cta" id="plan">
+      <div class="p-cta__border c-border"><span></span></div>
+      <a href="plan.html" class="c-dots c-dots--cta">
+        <span class="p-cta__sub">プランを見てみる</span>
+        <span class="p-cta__main">PLAN</span>
+      </a>
+    </div>
+
+    <section class="p-faq" id="faq">
+      <h2 class="c-title c-title--center">FAQ</h2>
+      <div class="p-faq__inner l-container l-container--faq l-section">
+        <details class="p-faq__details js-details">
+          <summary class="p-faq__summary js-details-summary"><span>Q</span>体験の持ち物はなんですか？<div class="p-faq__arrow"></div></summary>
+          <div class="p-faq__body js-details-content">
+            <p class="p-faq__text">トレーニングシューズ、スポーツウェア、タオルが必要です。</p>
+          </div>
+        </details>
+        <details class="p-faq__details js-details">
+          <summary class="p-faq__summary js-details-summary"><span>Q</span>どのようなトレーニングをおこないますか？<div class="p-faq__arrow"></div></summary>
+          <div class="p-faq__body js-details-content">
+            <p class="p-faq__text">当カウンセリングでは、お客様一人ひとりの目標や理想に合わせて、専属トレーナーが最適なトレーニングプランをご提案いたします。施設には、通常の筋力トレーニングや高強度インターバルトレーニング（HIIT）にも適した設備が整っています。</p>
+          </div>
+        </details>
+        <details class="p-faq__details js-details">
+          <summary class="p-faq__summary js-details-summary"><span>Q</span>営業時間を教えてください。<div class="p-faq__arrow"></div></summary>
+          <div class="p-faq__body js-details-content">
+            <p class="p-faq__text">平日：午前5時〜午後10時　土日：午前6時〜午後11時</p>
+          </div>
+        </details>
+        <details class="p-faq__details js-details">
+          <summary class="p-faq__summary js-details-summary"><span>Q</span>お支払い方法について教えて下さい。<div class="p-faq__arrow"></div></summary>
+          <div class="p-faq__body js-details-content">
+            <p class="p-faq__text">現金払い、クレジットカード、電子マネーが利用可能です。</p>
+          </div>
+        </details>
+        <details class="p-faq__details js-details">
+          <summary class="p-faq__summary js-details-summary"><span>Q</span>メンバーの男女比を教えてください<div class="p-faq__arrow"></div></summary>
+          <div class="p-faq__body js-details-content">
+            <p class="p-faq__text">男性約60％、女性約40％です。</p>
+          </div>
+        </details>
+        <div class="p-faq__btn">
+          <a href="conatct.html" class="c-button">無料体験の申し込みはこちら</a>
+        </div>
+      </div>
+    </section>
+
 </Layout>

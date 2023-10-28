@@ -6,7 +6,13 @@ html {
 }
 
 body {
-  font-family: 'Arial',YuGothic,'Yu Gothic','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3','メイリオ', Meiryo,'ＭＳ ゴシック',sans-serif;
+  font-family: $robot;
+  background: $mainBlue;
+  color: $gray;
+}
+
+.body-wrapper {
+  overflow-x: hidden;
 }
 
 a {
@@ -20,3 +26,21 @@ img {
   height: auto;
 }
 
+#loading-left,
+#loading-right {
+    background: $bluePale;
+    position: fixed;
+    top: 0;
+    width: 50vw;
+    height: 100vh;
+    z-index: 9999;
+
+}
+#loading-left {
+    left: 0;
+    transform-origin: left top;
+}
+#loading-right {
+    right: 0;
+    transform-origin: right top;
+}

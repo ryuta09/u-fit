@@ -10,10 +10,12 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@types/swiper": "^6.0.0",
     "astro": "^2.10.7",
     "astro-compress": "^2.0.15",
     "astro-relative-links": "^0.3.4",
     "sass": "^1.65.1",
-    "scss": "^0.2.4"
+    "scss": "^0.2.4",
+    "swiper": "^10.3.1"
   }
 }

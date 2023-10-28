@@ -41,13 +41,16 @@ export default defineConfig({
             }
             return `assets/[name].[extname]`;
           },
-          entryFileNames: "scripts/[name].js"
+          // entryFileNames: "scripts/[name].js"
+          entryFileNames: 'assets/js/[name].js',
         },
       },
       //CSSのminify化
       minify: false,
     },
-  
+    optimizeDeps: {
+      exclude: ['swiper']
+    }
   },
 
 });

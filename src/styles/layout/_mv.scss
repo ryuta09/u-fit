@@ -1,0 +1,46 @@
+@use '../global' as g;
+
+.l-mv {
+  position: relative;
+  margin-top: 7.2rem;
+  padding-top: calc((667 / 375) * 100%);
+  background: url(/@fs/assets/images/mv-sp.webp) no-repeat center center / cover;
+  @include g.mq(md) {
+    padding-top: calc((764 / 1282) * 100%);
+    background: url(/@fs/assets/images/mv-pc.webp) no-repeat center center / cover;
+  }
+  @include g.mq(lg) {
+    margin-top: 10rem;
+  }
+
+  &__title {
+    position: absolute;
+    right: 12px;
+    bottom: 139px;
+    display: grid;
+    place-items: center;
+    font-size: 4rem;
+    background: url(/@fs/assets/images/mv-title_bg.webp) no-repeat center center / cover;
+    width: 191px;
+    height: 155px;
+    font-weight: 400;
+    letter-spacing: g.$ls8;
+    color: g.$gray;
+    @include g.mq(md) {
+      font-size: 7.6rem;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 38px;
+      width: 346px;
+      height: 282px;
+    }
+    @include g.mq(lg) {
+      top: 50%;
+      transform: translateY(-50%);
+      right: 38px;
+      width: 459px;
+      height: 372px;
+      font-size: 9.6rem;
+    }
+  }
+}

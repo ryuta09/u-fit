@@ -1,0 +1,26 @@
+@use '../global' as g;
+
+.c-button {
+  max-width: 720px;
+  width: 100%;
+  margin-inline: auto;
+  display: inline-block;
+  font-size: 1.8rem;
+  font-weight: 500;
+  padding: 1.5rem 0;
+  color: g.$white;
+  text-align: center;
+  background: g.$gray;
+  border-radius: 3rem;
+  box-shadow: 0 10px 10px rgba(g.$blue2, 0.25);
+  cursor: pointer;
+  transition: all .3s;
+  @include g.mq(md) {
+    font-size: 3.6rem;
+    padding: 4rem 0;
+  }
+  &:hover {
+    background: g.$white;
+    color: g.$gray;
+  }
+}

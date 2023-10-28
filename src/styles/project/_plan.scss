@@ -1,0 +1,268 @@
+@use '../global' as g;
+
+/* planページのmv
+------------------------------------*/
+.p-plan {
+  &__bg {
+    margin-top: 7.2rem;
+    @include g.mq(lg) {
+      margin-top: 10rem;
+    }
+  }
+
+  /* 選べる３つのプラン
+  ------------------------------------*/
+  &__top {
+    margin-top: 5.6rem;
+    @include g.mq(md) {
+      margin-top: 10.4rem;
+    }
+  }
+
+  &__select {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 5.2rem;
+    @include g.mq(md) {
+      margin-top: 10.4rem;
+      flex-direction: row;
+    }
+  }
+
+  &__course {
+    // width: 264px;
+    border-radius: 20px;
+    background: g.$white;
+    text-align: center;
+    display: grid;
+    place-content: center;
+    place-items: center;
+    &:not(:first-child) {
+      margin-left: 0;
+      margin-top: 1.6rem;
+    }
+    @include g.mq(md) {
+      width: calc(33.333% - 36px * 2 / 3);
+      &:not(:first-child) {
+        margin-left: 36px;
+        margin-top: 0;
+      }
+    }
+    a {
+      display: grid;
+      place-items: center;
+      place-content: center;
+      letter-spacing: g.$ls8;
+    }
+  }
+
+  &__link {
+    display: block;
+    width: 264px;
+    padding-top: 3.4rem;
+    padding-bottom: 4.3rem;
+    cursor: pointer;
+    
+  }
+
+  &__number {
+    display: grid;
+    place-items: center;
+    width: 56px;
+    aspect-ratio: 1 / 1;
+    background: g.$mainBlue;
+    border-radius: 20px;
+    font-size: 2.4rem;
+    @include g.mq(md) {
+      font-size: 4rem;
+      width: 72px;
+    }
+  }
+
+  &__course-title {
+    font-size: 1.6rem;
+    margin-top: 2.5rem;
+    @include g.mq(md) {
+      margin-top: 3.2rem;
+      font-size: 2.4rem;
+      font-size: clamp(1.6rem, 1.875vw, 2.4rem);
+      min-height: 0;
+    }
+  }
+
+  /* 各コースの内容
+  ------------------------------------*/
+
+  &__menus {
+    max-width: 959px;
+    width: 100%;
+    margin-inline: auto;
+    letter-spacing: g.$ls8;
+    margin-top: 7.5rem;
+    padding: 0 2.5rem;
+    @include g.mq(md) {
+      margin-top: 12.8rem;
+    }
+  }
+
+  &__menu {
+    background: g.$white;
+    border-radius: 30px;
+    padding: 3rem 2rem 4rem 2.4rem;
+    @include g.mq(md) {
+      padding: 4rem 6.4rem 6.4rem 4rem;
+    }
+    &:not(:first-child) {
+      margin-top: 4rem;
+      @include g.mq(md) {
+        margin-top: 13.6rem;
+      }
+    }
+    &-head {
+      display: flex;
+      align-items: center;
+    }
+
+    &-number {
+      display: grid;
+      place-items: center;
+      width: 56px;
+      aspect-ratio: 1 / 1;
+      background: g.$mainBlue;
+      border-radius: 20px;
+      font-size: 2.4rem;
+      @include g.mq(md) {
+        font-size: 4rem;
+        width: 88px;
+      }
+    }
+
+    &-title {
+      font-size: 1.6rem;
+      margin-left: 2.4rem;
+      font-weight: 400;
+      @include g.mq(md) {
+        font-size: 3.2rem;
+      }
+    }
+  }
+
+  &__menu-price {
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    margin-top: 2.4rem;
+    @include g.mq(md) {
+      margin-top: 4.8rem;
+      flex-direction: row;
+    }
+  }
+
+  &__labels {
+    display: flex;
+    align-items: center;
+    margin-top: 2.4rem;
+    @include g.mq(md) {
+      margin: 0;
+    }
+  }
+
+  &__label {
+    display: inline-block;
+    font-size: 1.6rem;
+    padding: 1.4rem 2.4rem;
+    border-radius: 20px;
+    text-align: center;
+    background: g.$mainBlue;
+    &:not(:first-child) {
+      margin-left: 1.1rem;
+      @include g.mq(md) {
+        margin-left: 3.8rem;
+      }
+    }
+  }
+
+  &__price {
+    font-size: 2.4rem;
+    line-height: 0.9;
+    letter-spacing: g.$ls8;
+    @include g.mq(md) {
+      font-size: clamp(2.4rem, 3.75vw, 4.8rem);
+      min-height: 0;
+    }
+    & > span {
+      font-size: 3.6rem;
+      margin-left: 1.6rem;
+      @include g.mq(md) {
+        margin-left: 3.2rem;
+        font-size: clamp(3.6rem, 7.5vw, 9.6rem);
+        min-height: 0;
+      }
+    }
+  }
+
+  &__details {
+    margin-top: 3.2rem;
+    @include g.mq(md) {
+      margin-top: 7.2rem;
+    }
+  }
+
+  &__detail {
+    &:not(:first-child) {
+      margin-top: 1.6rem;
+      @include g.mq(md) {
+        margin-top: 4.8rem;
+      }
+    }
+    &-title {
+      font-size: 1.6em;
+      @include g.mq(md) {
+        font-size: 2.4rem;
+      }
+    }
+
+    &-list {
+      margin-top: 1.6rem;
+      @include g.mq(md) {
+        margin-top: 2.4rem;
+      }
+    }
+
+    &-item {
+      font-size: 1.4rem;
+      position: relative;
+      padding-left: 2.4rem;
+      &::before {
+        content: '';
+        position: absolute;
+        top: 4px;
+        left: 0;
+        width: 1.6rem;
+        aspect-ratio: 1 / 1;
+        border-radius: 50%;
+        background: g.$mainBlue;
+      }
+      @include g.mq(md) {
+        font-size: 1.6rem;
+        padding-left: 4rem;
+      }
+    }
+  }
+
+  &__btn {
+    text-align: center;
+    margin-top: 7.2rem;
+    padding: 0 2.5rem;
+    @include g.mq(md) {
+      margin-top: 13.6rem;
+      padding: 0;
+    }
+    a {
+      
+    }
+  }
+}
+

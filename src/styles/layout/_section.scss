@@ -1,0 +1,8 @@
+@use '../global' as g;
+
+.l-section {
+  padding: 0 2.5rem;
+  @include g.mq(md) {
+    padding: 0;
+  }
+}

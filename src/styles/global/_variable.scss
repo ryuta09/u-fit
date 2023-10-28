@@ -1,10 +1,24 @@
 //color
-
+$gray      : #4E4E4E;
+$grayLight : #F4F0F0;
+$grayBold  : #3A3A3A;
+$gray2     : #C6C6C6;
+$white     : #ffffff;
+$white2     :#EDEFF0;
+$whitePale : #EDEFF0;
+$mainBlue  : #7FB0BF;
+$blue      : #BBCCD1;
+$blueBold  : #BBCCD1;
+$bluePale  : #CFDBE1;
+$blue2     : #669EAA;
+$black     : #000000;
 // inner-size
-$inner: 1080px;
-// padding
-
+$inner: 920px;
+// letter-spacing
+$ls8: 0.08em;
 // font-family
-
+$robot: 'Roboto','Yu Gothic','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3','メイリオ', Meiryo,'MSゴシック',sans-serif;
+$font-noto: 'Noto Sans JP','Yu Gothic','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3','メイリオ', Meiryo,'MSゴシック',sans-serif;
+$oswald: 'Oswald','Yu Gothic','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3','メイリオ', Meiryo,'MSゴシック',sans-serif;
 // transition time
 $ts-time: 0.3s;

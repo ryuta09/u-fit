@@ -1,5 +1,264 @@
 @use '../global' as g;
 
 .l-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 72px;
+  width: 100%;
+  background: g.$mainBlue;
+  z-index: 100;
+  @include g.mq(lg) {
+    height: 100px;
+  }
+  &__inner {
+    padding-left: 24px;
+    padding-right: 34px;
+    position: relative;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    @include g.mq(lg) {
+      justify-content: space-between;
+      height: 100px;
+      padding: 0 14rem;
+    }
 
+  }
+
+  &__logo {
+    a {
+      display: flex;
+      align-items: center;
+      img {
+        width: 40px;
+        aspect-ratio: 1 / 1;
+        @include g.mq(lg) {
+          width: 61px;
+        }
+      }
+    }
+
+    &-title {
+      font-size: 2.4rem;
+      margin-left: 1rem;
+      font-weight: 400;
+      @include g.mq(lg) {
+        font-size: 4rem;
+        margin-left: 2.4rem;
+      }
+    }
+  }
+
+  &__nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 287px;
+    height: 100svh;
+    transform: translateX(100%);
+    background: g.$white;
+    // padding: 6.4rem 4rem;
+    transition: all .3s;
+    @include g.mq(md) {
+      width: 50vw;
+    }
+    @include g.mq(lg) {
+      opacity: 1;
+      pointer-events: auto;
+      position: static;
+      width: auto;
+      height: 100px;
+      background: transparent;
+      padding: 0;
+      transform: none;
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    @include g.mq(lg) {
+      background: transparent;
+      width: auto;
+      height: 100px;
+      border-radius: 0;
+      border: none;
+      flex-direction: row;
+    }
+  }
+
+  &__item {
+    &:not(:first-child) {
+      margin-top: 4rem;
+      @include g.mq(lg) {
+        margin-top: 0;
+        margin-left: 3.2rem;
+      }
+      &:last-child {
+        @include g.mq(lg2) {
+          margin-left: 48px;
+        }
+      }
+    }
+
+    &:not(:last-child) {
+      @include g.mq(lg) {
+        height: 100px;
+        & .l-header__link {
+          line-height: 10rem;
+          position: relative;
+          @include g.mq(lg) {
+            &::before {
+              content: '';
+              position: absolute;
+              bottom: 20px;
+              left: 0;
+              width: 0;
+              height: 2px;
+              background: g.$gray;
+              transform-origin: left center;
+              transition: all .3s;
+            }
+            &:hover {
+              &::before {
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+    
+    a {
+      display: block;
+      width: 100%;
+      font-size: 1.6rem;
+      text-transform: uppercase;
+    }
+
+    &--btn {
+      
+      a {
+        display: inline-block;
+        padding: 1.8rem 3.5rem;
+        border-radius: 24px;
+        text-align: center;
+        background: g.$white;
+        box-shadow: 0 4px 4px rgba(g.$black, 0.25);
+      }
+    }
+  }
+
+  /* contactアイコン
+  ------------------------------------*/
+  &__contact {
+    position: relative;
+    margin-left: auto;
+    margin-right: 60px;
+    width: 37px;
+    aspect-ratio: 1 / 1;
+    background: g.$white;
+    border-radius: 50%;
+    box-shadow: 0 3px 6px rgba(g.$black, 0.25);
+    transform: translateY(-4px);
+    &-logo {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateY(-50%) translateX(-50%);
+      font-size: 2.2rem;
+    }
+    @include g.mq(lg) {
+      display: none;
+    }
+    &::before {
+      content: 'お問い合わせ';
+      position: absolute;
+      bottom: -17px;
+      left: -14px;
+      white-space: nowrap;
+      display: inline-block;
+    }
+  }
+  /* ハンバーガーメニュー
+  ------------------------------------*/
+  &__hamburger {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-60%);
+    right: 34px;
+    width: 37px;
+    aspect-ratio: 1 / 1;
+    border: none;
+    background: g.$bluePale;
+    box-shadow: 0 3px 6px rgba(g.$black, 0.16);
+    border-radius: 50%;
+    text-align: center;
+    @include g.mq(lg) {
+      display: none;
+    }
+    span {
+      width: 14px;
+      height: 2px;
+      display: block;
+      margin-inline: auto;
+      background: g.$grayBold;
+      transition: transform 0.3s;
+      &:not(:last-child) {
+        margin-bottom: 3px;
+      }
+    }
+    &::before {
+      content: 'メニュー';
+      position: absolute;
+      bottom: -17px;
+      right: -4px;
+      white-space: nowrap;
+      display: inline-block;
+    }
+  }
+  
+}
+
+/* ハンバーガーメニューの挙動
+------------------------------------*/
+body.is-active {
+  overflow: hidden;
+  .l-header__hamburger {
+    // top: 120%;
+    // transform: translateY(0);
+    // right: 64px;
+    span {
+      &:nth-child(1) {
+        transform: translateY(5px) rotate(45deg);
+      }
+      &:nth-child(2) {
+        transform: translateX(-10px) scaleX(0);
+      }
+      &:nth-child(3) {
+        transform: translateY(-5px) rotate(-45deg);
+      }
+    }
+    &::before {
+      content: '';
+    }
+  }
+
+  .l-header__item--btn {
+    a {
+      background: g.$gray;
+      color:g.$white;
+    }
+  }
+
+  .l-header__contact {
+    display: none;
+  }
+  .l-header__nav {
+    transform: translateX(0);
+  }
 }

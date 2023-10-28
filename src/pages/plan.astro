@@ -1,0 +1,175 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="コーディング">
+  <div class="p-plan__bg">
+    <div class="c-bg c-bg--plan"></div>
+  </div>
+
+  <section class="p-plan">
+    <div class="p-plan__top">
+      <h2 class="p-plan__title c-title c-title--center">選べる３つのプラン</h2>
+      <ul class="p-plan__select l-container l-container--course">
+        <li class="p-plan__course">
+          <a class="p-plan__link" href="#menu1">
+            <span class="p-plan__number">1</span>
+            <p class="p-plan__course-title">ビギナーコース</p>
+          </a>
+        </li>
+        <li class="p-plan__course">
+          <a class="p-plan__link" href="#menu2">
+            <span class="p-plan__number">2</span>
+            <p class="p-plan__course-title">トレーニングコース</p>
+          </a>
+        </li>
+        <li class="p-plan__course">
+          <a class="p-plan__link" href="#menu3">
+            <span class="p-plan__number">3</span>
+            <p class="p-plan__course-title">ストイックコース</p>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <ul class="p-plan__menus">
+      <li class="p-plan__menu" id="menu1">
+        <div class="p-plan__menu-head">
+          <span class="p-plan__menu-number">1</span>
+          <h3 class="p-plan__menu-title">トレーニングコース</h3>
+        </div>
+        <div class="p-plan__menu-price">
+          <ul class="p-plan__labels">
+            <li class="p-plan__label">食事指導</li>
+            <li class="p-plan__label">トレーニング</li>
+          </ul>
+          <div class="p-plan__price">
+            8回<span>8200</span>円
+          </div>
+        </div>
+        <div class="p-plan__details">
+          <div class="p-plan__detail">
+            <h3 class="p-plan__detail-title">こんな人におすすめ</h3>
+            <ul class="p-plan__detail-list">
+              <li class="p-plan__detail-item">運動の習慣がない方。</li>
+              <li class="p-plan__detail-item">疲れやストレスを感じやすい方。</li>
+            </ul>
+          </div>
+          <div class="p-plan__detail">
+            <h3 class="p-plan__detail-title">トレーニング内容</h3>
+            <ul class="p-plan__detail-list">
+              <li class="p-plan__detail-item">専門トレーナーによるカウンセリング後、メニューを組んでいきます。</li>
+              <li class="p-plan__detail-item">初心者におすすめの、継続しやすいトレーニングメニューとなっております。</li>
+            </ul>
+          </div>
+          <div class="p-plan__detail">
+            <h3 class="p-plan__detail-title">食事指導</h3>
+            <ul class="p-plan__detail-list">
+              <li class="p-plan__detail-item">無理なく痩せながら栄養素も補える食生活をサポート</li>
+              <li class="p-plan__detail-item">おすすめレシピの紹介を行います。</li>
+            </ul>
+          </div>
+          <div class="p-plan__detail">
+            <h3 class="p-plan__detail-title">カウンセリング</h3>
+            <ul class="p-plan__detail-list">
+              <li class="p-plan__detail-item">専属トレーナーが、あなたの生活習慣、食習慣を詳しくヒアリングします。</li>
+              <li class="p-plan__detail-item">プログラムは、どんな内容なら続けられそうかを踏まえ制作します。</li>
+            </ul>
+          </div>
+        </div>
+      </li>
+      <li class="p-plan__menu" id="menu2">
+        <div class="p-plan__menu-head">
+          <span class="p-plan__menu-number">2</span>
+          <h3 class="p-plan__menu-title">トレーニングコース</h3>
+        </div>
+        <div class="p-plan__menu-price">
+          <ul class="p-plan__labels">
+            <li class="p-plan__label">トレーニング</li>
+          </ul>
+          <div class="p-plan__price">
+            8回<span>8200</span>円
+          </div>
+        </div>
+        <div class="p-plan__details">
+          <div class="p-plan__detail">
+            <h3 class="p-plan__detail-title">こんな人におすすめ</h3>
+            <ul class="p-plan__detail-list">
+              <li class="p-plan__detail-item">とにかく体力をつけたい方。</li>
+              <li class="p-plan__detail-item">自分に合う運動方法がわからない。</li>
+            </ul>
+          </div>
+          <div class="p-plan__detail">
+            <h3 class="p-plan__detail-title">トレーニング内容</h3>
+            <ul class="p-plan__detail-list">
+              <li class="p-plan__detail-item">適度に休憩をはさみながらのセッションです。</li>
+              <li class="p-plan__detail-item">自宅で１人でもできるストレッチやトレーニングメニューを指導していきます。</li>
+            </ul>
+          </div>
+  
+          <div class="p-plan__detail">
+            <h3 class="p-plan__detail-title">カウンセリング</h3>
+            <ul class="p-plan__detail-list">
+              <li class="p-plan__detail-item">運動が習慣化となるようにメンタル面のフォローをします。</li>
+              <li class="p-plan__detail-item">目標を設定して、それにあわせたトレーニングを設定します。</li>
+            </ul>
+          </div>
+        </div>
+      </li>
+      <li class="p-plan__menu" id="menu3">
+        <div class="p-plan__menu-head">
+          <span class="p-plan__menu-number">3</span>
+          <h3 class="p-plan__menu-title">ストイックコース</h3>
+        </div>
+        <div class="p-plan__menu-price">
+          <ul class="p-plan__labels">
+            <li class="p-plan__label">食事指導</li>
+            <li class="p-plan__label">トレーニング</li>
+          </ul>
+          <div class="p-plan__price">
+            8回<span>9000</span>円
+          </div>
+        </div>
+        <div class="p-plan__details">
+          <div class="p-plan__detail">
+            <h3 class="p-plan__detail-title">こんな人におすすめ</h3>
+            <ul class="p-plan__detail-list">
+              <li class="p-plan__detail-item">努力の継続ができる方。</li>
+              <li class="p-plan__detail-item">集中的に取り組むことが好きな方。</li>
+            </ul>
+          </div>
+          <div class="p-plan__detail">
+            <h3 class="p-plan__detail-title">トレーニング内容</h3>
+            <ul class="p-plan__detail-list">
+              <li class="p-plan__detail-item">厳しいトレーニングスケジュールで、体力と筋力の向上を追求します。</li>
+              <li class="p-plan__detail-item">重量を使用したトレーニングで、筋肉の成長と体力の向上を図ります。</li>
+            </ul>
+          </div>
+          <div class="p-plan__detail">
+            <h3 class="p-plan__detail-title">食事指導</h3>
+            <ul class="p-plan__detail-list">
+              <li class="p-plan__detail-item">高タンパクで低炭水化物などの食事スタイルに基づき、筋肉の成長と体脂肪の減少をサポートします。</li>
+              <li class="p-plan__detail-item">食事の進捗をモニタリングし、効果的な食事戦略を維持します。</li>
+            </ul>
+          </div>
+          <div class="p-plan__detail">
+            <h3 class="p-plan__detail-title">カウンセリング</h3>
+            <ul class="p-plan__detail-list">
+              <li class="p-plan__detail-item">専属トレーナーが定期的に進捗状況を確認し、目標に向けての計画を立てます。</li>
+              <li class="p-plan__detail-item">トレーニングの効果を定量的および定性的に評価し、改善の余地があれば修正を加えます。</li>
+            </ul>
+          </div>
+        </div>
+        
+      </li>
+    </ul>
+    
+    <div class="p-plan__btn">
+      <a class="c-button" href="contact.html">無料体験の申し込みはこちら</a>
+    </div>
+
+  </section>
+
+</Layout>
+
+<script type="module" src="/assets/js/plan.js"></script>

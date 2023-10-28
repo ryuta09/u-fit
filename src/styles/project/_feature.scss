@@ -1,0 +1,105 @@
+@use '../global' as g;
+
+.p-feature {
+  margin-top: 5.6rem;
+  @include g.mq(md) {
+    margin-top: 20.7rem;
+  }
+  &__title {
+
+  }
+
+  &__inner {
+
+  }
+
+  &__list {
+    margin-top: 4.8rem;
+  }
+
+  &__item {
+    letter-spacing: g.$ls8;
+    padding: 2.4rem 1.7rem 3.2rem;
+    background: g.$white;
+    border-radius: 30px;
+    position: relative;
+    max-width: 328px;
+    margin-inline: auto;
+    &:not(:first-child) {
+      margin-top: 4.8rem;
+      @include g.mq(md) {
+        margin-top: 7.8rem;
+      }
+    }
+    @include g.mq(md) {
+      display: grid;
+      grid-template-columns: auto auto;
+      grid-template-rows: auto auto;
+      padding: 3.6rem 3.2rem 3.6rem 8.8rem;
+      max-width: none;
+    }
+  }
+
+  &__number {
+    position: absolute;
+    top: 12px;
+    left: 30px;
+    transform: translate(-50%, -50%);
+    display: block;
+    display: grid;
+    place-items: center;
+    width: 4.8rem;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    background: g.$bluePale;
+    font-size: 1.6rem;
+    font-weight: 400;
+    @include g.mq(md) {
+      font-size: 4.8rem;
+      width: 137px;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  &__item-title {
+    font-size: 1.6rem;
+    text-align: center;
+    font-weight: 400;
+    @include g.mq(md) {
+      font-size: 2rem;
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+      align-self: flex-end;
+      width: fit-content;
+    }
+  }
+
+  &__img {
+    margin-top: 2.4rem;
+    @include g.mq(md) {
+      grid-row: 1 / 3;
+      grid-column: 2 / 3;
+      height: 100%;
+      margin-top: 0;
+    }
+    img {
+      width: 240px;
+      margin-inline: auto;
+      @include g.mq(md) {
+        height: 100%;
+      }
+    }
+  }
+
+  &__text {
+    font-size: 1.6em;
+    margin-top: 2.4rem;
+    @include g.mq(md) {
+      grid-row: 2 / 3;
+      grid-column: 1 / 2;
+      margin-right: 6.4rem;
+    }
+  }
+
+}

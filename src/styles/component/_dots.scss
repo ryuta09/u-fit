@@ -1,0 +1,84 @@
+@use '../global' as g;
+
+.c-dots {
+  display: inline-block;
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -1.1rem;
+    width: .8rem;
+    aspect-ratio: 1 / 1;
+    background: g.$white;
+    border-radius: 50%;
+    @include g.mq(md) {
+      width: 2.5rem;
+      left: -4.2rem;
+    }
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -1.1rem;
+    width: .8rem;
+    aspect-ratio: 1 / 1;
+    background: g.$white;
+    border-radius: 50%;
+    @include g.mq(md) {
+      width: 2.5rem;
+      right: -4.2rem;
+    }
+  }
+
+  &--cta {
+    @extend .c-dots;
+    &::before {
+      content: '';
+      background: g.$mainBlue;
+      width: 1.6rem;
+      left: 3.6rem;
+      @include g.mq(md) {
+        width: 3rem;
+        left: 8.6rem;
+      }
+    }
+    &::after {
+      content: '';
+      background: g.$mainBlue;
+      width: 1.6rem;
+      right: 3.6rem;
+      @include g.mq(md) {
+        width: 3rem;
+        right: 8.6rem;
+      }
+    }
+  }
+
+  &--contact {
+    @extend .c-dots;
+    &::before {
+      content: '';
+      background: g.$mainBlue;
+      width: 1.2rem;
+      left: -3.2rem;
+      @include g.mq(md) {
+        width: 2.5rem;
+        left: -5.6rem;
+      }
+    }
+    &::after {
+      content: '';
+      background: g.$mainBlue;
+      width: 1.2rem;
+      right: -3.2rem;
+      @include g.mq(md) {
+        width: 2.5rem;
+        right: -5.6rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,99 @@
+@use '../global' as g;
+
+.p-about {
+  margin-top: 7.6rem;
+  overflow: visible;
+  @include g.mq(md) {
+    margin-top: 12.6rem;
+  }
+  &__inner {
+
+  }
+
+
+  &__cont {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    @include g.mq(md) {
+      flex-direction: row;
+    }
+  }
+
+  &__body {
+    max-width: none;
+    width: 324px;
+    margin-inline: auto;
+    position: relative;
+    z-index: 1;
+    
+    @include g.mq(md) {
+      max-width: 651px;
+      width: 100%;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -42%);
+      margin: auto;
+      z-index: -1;
+      display: block;
+      background: url(/@fs/assets/images/aoubt-text_bg.webp) no-repeat center center / contain;
+      width: 470px;
+      height: 318px;
+      @include g.mq(md) {
+        width: 651px;
+        height: 433px;
+        top: 50%;
+        left: 0;
+        transform: translate(0, -50%);
+      }
+    }
+  }
+
+  &__title {
+    // margin-top: 4.4rem;
+    margin-left: 2rem;
+    letter-spacing: g.$ls8;
+    @include g.mq(md) {
+      // margin-top: 0;
+      margin-left: 18.5rem;
+    }
+  }
+
+  &__text {
+    font-size: 1.6rem;
+    line-height: calc(24 / 16);
+    letter-spacing: g.$ls8;
+    margin: 2rem 0 0;
+    min-width: 24rem;
+    @include g.mq(md) {
+      margin: 2rem 10.7rem 0;
+    }
+    @include g.mq(lg) {
+      margin: 5.5rem 10.7rem 0;
+      line-height: calc(40 / 16);
+    }
+
+    span {
+      background: linear-gradient(transparent 75%, g.$white 75%);
+    }
+  }
+
+  &__img {
+    max-width: 178px;
+    width: 100%;
+    border-radius: 50%;
+    position: relative;
+    z-index: 2;
+    margin: 0 auto;
+    @include g.mq(md) {
+      max-width: 328px;
+      margin-left: -6rem;
+    }
+    img {
+    }
+  }
+}

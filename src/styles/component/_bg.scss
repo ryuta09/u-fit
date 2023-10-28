@@ -1,0 +1,23 @@
+@use '../global' as g;
+
+.c-bg {
+  padding-top: calc((344 / 375) * 100%);
+  position: relative;
+  @include g.mq(md) {
+    padding-top: calc((456 / 1280) * 100%);
+
+  }
+  &--plan {
+    background: url(/assets/images/plan-bg-sp.webp) no-repeat center center / cover;
+    @include g.mq(md) {
+      background: url(/assets/images/plan-bg-pc.webp) no-repeat center center / cover;
+    }
+  }
+
+  &--contact {
+    background: url(/assets/images/contact-bg-sp.webp) no-repeat center center / cover;
+    @include g.mq(md) {
+      background: url(/assets/images/contact-bg-pc.webp) no-repeat center center / cover;
+    }
+  }
+}
