@@ -55,10 +55,10 @@
     top: 0;
     right: 0;
     width: 287px;
-    height: 100svh;
+    height: 100lvh;
+    z-index: 2000;
     transform: translateX(100%);
     background: g.$white;
-    // padding: 6.4rem 4rem;
     transition: all .3s;
     @include g.mq(md) {
       width: 50vw;
@@ -198,6 +198,7 @@
     box-shadow: 0 3px 6px rgba(g.$black, 0.16);
     border-radius: 50%;
     text-align: center;
+    z-index: 3000;
     @include g.mq(lg) {
       display: none;
     }
