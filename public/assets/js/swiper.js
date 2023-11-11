@@ -1,6 +1,5 @@
 import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.mjs';
 const swiper = new Swiper('.swiper', {
-  // Optional parameters
   slidesPerView: 1.5,
   spaceBetween: 40,
   

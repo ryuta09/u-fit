@@ -3,9 +3,11 @@
 .p-parallax {
   margin-top: 4rem;
   position: relative;
-  width: 100vw;
-  height: calc((104 / 375) * 100vw);
-  @include g.mq(md) {
+  max-width: 1280px;
+  margin-inline: auto;
+  height: 100px;
+  
+  @include g.mq(sm) {
     margin-top: 15.2rem;
     height: calc((347 / 1280) * 100vw);
   }
